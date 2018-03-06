@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Markdown," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Markdown">
+<meta name="keywords" content="Markdown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown">
+<meta property="og:url" content="http://xiao.dog/2018/03/02/Markdown语法/index.html">
+<meta property="og:site_name" content="Xiao">
+<meta property="og:description" content="Markdown">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-06T01:47:44.831Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Markdown">
+<meta name="twitter:description" content="Markdown">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://xiao.dog/2018/03/02/Markdown语法/"/>
+
+
+
+
+
+  <title>Markdown | Xiao</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Xiao</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xiao.dog/2018/03/02/Markdown语法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/dog.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Markdown</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-02T00:00:00+08:00">
+                2018-03-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h1><a id="more"></a>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><h1 id="—-gt-6-一到六级标题"><a href="#—-gt-6-一到六级标题" class="headerlink" title="—&gt; #*6  一到六级标题"></a>—&gt; #*6  一到六级标题</h1><hr>
+<h2 id="横线"><a href="#横线" class="headerlink" title="横线"></a>横线</h2><p>***、—、___ 可以显示横线效果</p>
+<hr>
+<h2 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h2><h3 id="普通文本"><a href="#普通文本" class="headerlink" title="普通文本"></a>普通文本</h3><p>普通文本无需添加标签</p>
+<h3 id="单行文本"><a href="#单行文本" class="headerlink" title="单行文本"></a>单行文本</h3><pre><code>在开头加入4个空格或1个Tab
+</code></pre><h3 id="文本块"><a href="#文本块" class="headerlink" title="文本块"></a>文本块</h3><pre><code>1.在文本块的每一行开头
+  加上4个空格或1个Tab
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2.使用3个反引号，</span><br><span class="line">  将文本块括起来</span><br></pre></td></tr></table></figure>
+<h3 id="文字高亮"><a href="#文字高亮" class="headerlink" title="文字高亮"></a>文字高亮</h3><p>使用一对反引号可以<code>高亮</code>文字或当做文章的tag</p>
+<h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><p>直接回车不能换行，<br>要在上一行后面加两个空格。</p>
+<p>或者在两行之间加一个空行，不过两行中间会有明显间距</p>
+<h3 id="斜体、粗体、下划线"><a href="#斜体、粗体、下划线" class="headerlink" title="斜体、粗体、下划线"></a>斜体、粗体、下划线</h3><p>_斜体_ <em>斜体</em><br><strong>粗体</strong> <strong>粗体</strong><br><del>删除线</del><br><strong><em>斜粗体</em></strong><br><strong><em><del>斜粗体删除线</del></em></strong></p>
+<hr>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>基本格式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![alt](URL title)</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>alt： 加载失败时显示的文本（可省略）</li>
+<li>title： 鼠标悬停是显示的文本（可省略）</li>
+<li>URL： 图片路径。本仓库使用<code>相对路径</code>，其他仓库使用<code>仓库地址/raw/分支名/图片路径</code></li>
+</ul>
+<hr>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="链接URL"><a href="#链接URL" class="headerlink" title="链接URL"></a>链接URL</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[显示文字](链接地址)</span><br></pre></td></tr></table></figure>
+<h3 id="图片链接"><a href="#图片链接" class="headerlink" title="图片链接"></a>图片链接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[![文字]](图片地址)</span><br></pre></td></tr></table></figure>
+<h2 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h2><p><a href="#Markdown">回到顶部</a></p>
+<hr>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><h4 id="一级无序列表"><a href="#一级无序列表" class="headerlink" title="一级无序列表"></a>一级无序列表</h4><ul>
+<li>‘-‘</li>
+</ul>
+<ul>
+<li>‘*’</li>
+</ul>
+<h4 id="多级无序列表"><a href="#多级无序列表" class="headerlink" title="多级无序列表"></a>多级无序列表</h4><ul>
+<li>一级<ul>
+<li>二级<ul>
+<li>三级</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><h4 id="一级有序列表"><a href="#一级有序列表" class="headerlink" title="一级有序列表"></a>一级有序列表</h4><ol>
+<li>数字后面加一个小数点和空格</li>
+<li>数字不影响顺序</li>
+</ol>
+<h4 id="多级有序列表"><a href="#多级有序列表" class="headerlink" title="多级有序列表"></a>多级有序列表</h4><ol>
+<li>一级列表<ol>
+<li>二级列表<ol>
+<li>三级列表</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="复选框列表"><a href="#复选框列表" class="headerlink" title="复选框列表"></a>复选框列表</h3><ul>
+<li style="list-style: none"><input type="checkbox"> 选项1</li>
+<li style="list-style: none"><input type="checkbox" checked> 选项2</li>
+</ul>
+<h2 id="块引用"><a href="#块引用" class="headerlink" title="块引用"></a>块引用</h2><h3 id="引用文本"><a href="#引用文本" class="headerlink" title="引用文本"></a>引用文本</h3><h4 id="一级引用"><a href="#一级引用" class="headerlink" title="一级引用"></a>一级引用</h4><blockquote>
+<p>这是一段引用<br>另一段</p>
+</blockquote>
+<h4 id="多级引用"><a href="#多级引用" class="headerlink" title="多级引用"></a>多级引用</h4><blockquote>
+<p>first</p>
+<blockquote>
+<p>second</p>
+<blockquote>
+<p>third</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><p>在三个反引号后面加上编程语言的名字，另起一行写代码，以3个反引号结束。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"Hello World"</span>)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
+<thead>
+<tr>
+<th>表头1</th>
+<th>表头2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1行1列</td>
+<td>1行2列</td>
+</tr>
+<tr>
+<td>2行1列</td>
+<td>2行2列</td>
+</tr>
+</tbody>
+</table>
+<h3 id="表格对齐"><a href="#表格对齐" class="headerlink" title="表格对齐"></a>表格对齐</h3><p>“:”指定对齐方式  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:center">居中</th>
+<th style="text-align:right">右对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">left center right</td>
+<td style="text-align:center">left center right</td>
+<td style="text-align:right">left center right</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="表情"><a href="#表情" class="headerlink" title="表情"></a>表情</h2><p>两个冒号中间写表情名<br>:blush:</p>
+<h2 id="diff语法"><a href="#diff语法" class="headerlink" title="diff语法"></a>diff语法</h2><p>三个反引号后加diff，+表示增加，-表示删除<br><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="addition">+ add</span></span><br><span class="line"><span class="deletion">- delete</span></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Markdown/" rel="tag"># Markdown</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/01/PEP 8/" rel="next" title="PEP 8">
+                <i class="fa fa-chevron-left"></i> PEP 8
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/02/Django工程结构/" rel="prev" title="Django 工程目录结构">
+                Django 工程目录结构 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/dog.jpg"
+                alt="xiao" />
+            
+              <p class="site-author-name" itemprop="name">xiao</p>
+              <p class="site-description motion-element" itemprop="description">dog face :-)</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Markdown"><span class="nav-number">1.</span> <span class="nav-text">Markdown</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题"><span class="nav-number">1.1.</span> <span class="nav-text">标题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#—-gt-6-一到六级标题"><span class="nav-number">2.</span> <span class="nav-text">—&gt; #*6  一到六级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#横线"><span class="nav-number">2.1.</span> <span class="nav-text">横线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本"><span class="nav-number">2.2.</span> <span class="nav-text">文本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#普通文本"><span class="nav-number">2.2.1.</span> <span class="nav-text">普通文本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单行文本"><span class="nav-number">2.2.2.</span> <span class="nav-text">单行文本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本块"><span class="nav-number">2.2.3.</span> <span class="nav-text">文本块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文字高亮"><span class="nav-number">2.2.4.</span> <span class="nav-text">文字高亮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#换行"><span class="nav-number">2.2.5.</span> <span class="nav-text">换行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斜体、粗体、下划线"><span class="nav-number">2.2.6.</span> <span class="nav-text">斜体、粗体、下划线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片"><span class="nav-number">2.3.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接"><span class="nav-number">2.4.</span> <span class="nav-text">链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#链接URL"><span class="nav-number">2.4.1.</span> <span class="nav-text">链接URL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片链接"><span class="nav-number">2.4.2.</span> <span class="nav-text">图片链接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#锚点"><span class="nav-number">2.5.</span> <span class="nav-text">锚点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表"><span class="nav-number">2.6.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#无序列表"><span class="nav-number">2.6.1.</span> <span class="nav-text">无序列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一级无序列表"><span class="nav-number">2.6.1.1.</span> <span class="nav-text">一级无序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多级无序列表"><span class="nav-number">2.6.1.2.</span> <span class="nav-text">多级无序列表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有序列表"><span class="nav-number">2.6.2.</span> <span class="nav-text">有序列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一级有序列表"><span class="nav-number">2.6.2.1.</span> <span class="nav-text">一级有序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多级有序列表"><span class="nav-number">2.6.2.2.</span> <span class="nav-text">多级有序列表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复选框列表"><span class="nav-number">2.6.3.</span> <span class="nav-text">复选框列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#块引用"><span class="nav-number">2.7.</span> <span class="nav-text">块引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引用文本"><span class="nav-number">2.7.1.</span> <span class="nav-text">引用文本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一级引用"><span class="nav-number">2.7.1.1.</span> <span class="nav-text">一级引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多级引用"><span class="nav-number">2.7.1.2.</span> <span class="nav-text">多级引用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码高亮"><span class="nav-number">2.8.</span> <span class="nav-text">代码高亮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格"><span class="nav-number">2.9.</span> <span class="nav-text">表格</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表格对齐"><span class="nav-number">2.9.1.</span> <span class="nav-text">表格对齐</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表情"><span class="nav-number">2.10.</span> <span class="nav-text">表情</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#diff语法"><span class="nav-number">2.11.</span> <span class="nav-text">diff语法</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiao</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
