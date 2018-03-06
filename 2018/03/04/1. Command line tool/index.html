@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Scrapy," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Available tool commandsGlobal commands1. startprojectscrapy startproject &amp;lt;project_name&amp;gt; [project_dir]  $ scrapy startproject myproject 在 project_dir 文件夹下，创建一个名为 project_name 的爬虫项目。">
+<meta name="keywords" content="Scrapy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Scrapy Commands">
+<meta property="og:url" content="http://xiao.dog/2018/03/04/1. Command line tool/index.html">
+<meta property="og:site_name" content="Xiao">
+<meta property="og:description" content="Available tool commandsGlobal commands1. startprojectscrapy startproject &amp;lt;project_name&amp;gt; [project_dir]  $ scrapy startproject myproject 在 project_dir 文件夹下，创建一个名为 project_name 的爬虫项目。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-06T03:42:35.199Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Scrapy Commands">
+<meta name="twitter:description" content="Available tool commandsGlobal commands1. startprojectscrapy startproject &amp;lt;project_name&amp;gt; [project_dir]  $ scrapy startproject myproject 在 project_dir 文件夹下，创建一个名为 project_name 的爬虫项目。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://xiao.dog/2018/03/04/1. Command line tool/"/>
+
+
+
+
+
+  <title>Scrapy Commands | Xiao</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Xiao</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xiao.dog/2018/03/04/1. Command line tool/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/dog.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Scrapy Commands</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-04T00:00:00+08:00">
+                2018-03-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Available-tool-commands"><a href="#Available-tool-commands" class="headerlink" title="Available tool commands"></a>Available tool commands</h1><h2 id="Global-commands"><a href="#Global-commands" class="headerlink" title="Global commands"></a>Global commands</h2><h3 id="1-startproject"><a href="#1-startproject" class="headerlink" title="1. startproject"></a>1. startproject</h3><pre><code>scrapy startproject &lt;project_name&gt; [project_dir]
+
+$ scrapy startproject myproject
+</code></pre><p>在 <code>project_dir</code> 文件夹下，创建一个名为 <code>project_name</code> 的爬虫项目。</p>
+<a id="more"></a>
+<h3 id="2-genspider"><a href="#2-genspider" class="headerlink" title="2. genspider"></a>2. genspider</h3><pre><code>scrapy genspider [-t template] &lt;spider_name&gt; &lt;domain&gt;
+
+$ scrapy genspider example example.com
+$ scrapy genspider -t crawl scrapyorg scrapy.org
+</code></pre><p>在当前项目的 <code>spider</code> 文件夹下创建一个名为 <code>spider_name</code> 的爬虫. <code>domain</code> 用来生成 <code>allowed_domains</code>和 <code>start_urls</code>。</p>
+<p>template选项</p>
+<ul>
+<li>basic(default)</li>
+<li>crawl</li>
+<li>csvfeed</li>
+<li>xmlfeed  </li>
+</ul>
+<h3 id="3-settings"><a href="#3-settings" class="headerlink" title="3. settings"></a>3. settings</h3><pre><code>scrapy setting [options]
+
+$ scrapy settings --get BOT_NAME
+</code></pre><p>查看项目的配置.</p>
+<h3 id="4-runspider"><a href="#4-runspider" class="headerlink" title="4. runspider"></a>4. runspider</h3><pre><code>scrapy runspider &lt;spider_file.py&gt;
+
+$ scrapy runspider myspider.py
+</code></pre><p>不创建项目，直接运行一个包含在Python文件中的爬虫。</p>
+<h3 id="5-shell"><a href="#5-shell" class="headerlink" title="5. shell"></a>5. shell</h3><pre><code>scrapy shell [url]
+
+$ scrapy shell http://www.example.com/some/page.html
+$ scrapy shell --nolog http://www.example.com/ -c &apos;(response.status, response.url)&apos;
+</code></pre><p>为指定的 <code>url</code> 启动Scrapy shell，如果没有 url， 则打开一个空的 shell。</p>
+<p>可选命令：</p>
+<ul>
+<li><code>--spider=SPIDER</code>: 绕过爬虫的自动检测，并使用特定爬虫</li>
+<li><code>-c code</code>: 检查shell中的代码，打印结果并退出</li>
+</ul>
+<h3 id="6-fetch"><a href="#6-fetch" class="headerlink" title="6. fetch"></a>6. fetch</h3><pre><code>scrapy fetch &lt;url&gt;
+
+$ scrapy fetch --nolog http://www.example.com/some/page.html
+</code></pre><p>使用 Scrapy downloader 下载指定 <code>url</code> 的内容，并将内容写入标准输出。</p>
+<p>可选命令</p>
+<ul>
+<li><code>--spider=SPIDER</code>: 绕过爬虫的自动检测，并使用特定爬虫</li>
+<li><code>--headers</code>: 输出响应头，而不是响应正文</li>
+</ul>
+<h3 id="7-view"><a href="#7-view" class="headerlink" title="7. view"></a>7. view</h3><pre><code>scrapy view &lt;url&gt;
+
+$ scrapy view http://www.example.com/some/page.html
+</code></pre><p>在浏览器中打开 <code>url</code>，并用Scrapy检查。</p>
+<h3 id="8-version"><a href="#8-version" class="headerlink" title="8. version"></a>8. version</h3><pre><code>scrapy version [-v]
+</code></pre><p>打印 Scrapy 版本。 如果与 <code>-v</code> 一起使用，它还会打印 Python，Twisted 和 Platform 信息，对于错误报告很有用。</p>
+<h2 id="Project-only-commands"><a href="#Project-only-commands" class="headerlink" title="Project-only commands"></a>Project-only commands</h2><h3 id="1-crawl"><a href="#1-crawl" class="headerlink" title="1. crawl"></a>1. crawl</h3><pre><code>scrapy crawl &lt;spider&gt;
+</code></pre><p>运行爬虫。（运行前常用 <code>list</code> 列出并检查爬虫）</p>
+<h3 id="2-check"><a href="#2-check" class="headerlink" title="2. check"></a>2. check</h3><pre><code>scrapy check [-l] &lt;spider&gt;
+</code></pre><p>检查爬虫。</p>
+<h3 id="3-list"><a href="#3-list" class="headerlink" title="3. list"></a>3. list</h3><pre><code>scrapy list
+</code></pre><p>列出当前项目下的所有爬虫。</p>
+<h3 id="4-edit"><a href="#4-edit" class="headerlink" title="4. edit"></a>4. edit</h3><pre><code>scrapy editor &lt;spider&gt;
+</code></pre><p>使用 EDITOR 环境变量或 EDITOR 设置中定义的编辑器编辑 <code>spider</code>。</p>
+<h3 id="5-parse"><a href="#5-parse" class="headerlink" title="5. parse"></a>5. parse</h3><pre><code>scrapy parse &lt;url&gt; [options]
+
+$ scrapy parse http://www.example.com/ -c parse_item
+</code></pre><p>获取 <code>url</code> 然后使用 <code>parse</code> 方法解析它。若果有 <code>--callback</code> 选项，则使用 <code>--callback</code> 传递的方法解析。</p>
+<p>可选命令</p>
+<ul>
+<li><code>--spider=SPIDER</code>: 绕过爬虫的自动检测，并使用特定爬虫</li>
+<li><code>--a NAME=VALUE</code>: 设置蜘蛛参数（可能会重复）</li>
+<li><code>--callback</code> or <code>-c</code>: 使用指定的 <code>spider</code> 作为解析响应的回调函数</li>
+<li><code>--pipelines</code>: 通过pipelines处理项目</li>
+<li><code>--rules</code> or <code>-r</code>: 使用 CrawlSpider 规则来获取用于解析响应的回调函数</li>
+<li><code>--noitems</code>: 不显示爬到的 <code>items</code></li>
+<li><code>--nolinks</code>: 不显示提取的衔接</li>
+<li><code>--nocolour</code>: 避免使用 <code>pygments</code> 来着色输出</li>
+<li><code>--depth</code> or <code>-d</code>: 递归爬取请求的深度（默认值：1）</li>
+<li><code>--verbose</code> or <code>-v</code>: 显示每个深度级别的信息</li>
+</ul>
+<h3 id="6-bench"><a href="#6-bench" class="headerlink" title="6. bench"></a>6. bench</h3><pre><code>scrapy bench
+</code></pre><p>进行一个快速的基准测试。</p>
+<h2 id="Custom-project-commands"><a href="#Custom-project-commands" class="headerlink" title="Custom project commands"></a>Custom project commands</h2><p>可以通过 <code>COMMANDS_MODULE</code> 的设置来添加自定义项目命令。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Scrapy/" rel="tag"># Scrapy</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/02/Markdown语法/" rel="next" title="Markdown">
+                <i class="fa fa-chevron-left"></i> Markdown
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/dog.jpg"
+                alt="xiao" />
+            
+              <p class="site-author-name" itemprop="name">xiao</p>
+              <p class="site-description motion-element" itemprop="description">dog face :-)</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Available-tool-commands"><span class="nav-number">1.</span> <span class="nav-text">Available tool commands</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Global-commands"><span class="nav-number">1.1.</span> <span class="nav-text">Global commands</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-startproject"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. startproject</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-genspider"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. genspider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-settings"><span class="nav-number">1.1.3.</span> <span class="nav-text">3. settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-runspider"><span class="nav-number">1.1.4.</span> <span class="nav-text">4. runspider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-shell"><span class="nav-number">1.1.5.</span> <span class="nav-text">5. shell</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-fetch"><span class="nav-number">1.1.6.</span> <span class="nav-text">6. fetch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-view"><span class="nav-number">1.1.7.</span> <span class="nav-text">7. view</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-version"><span class="nav-number">1.1.8.</span> <span class="nav-text">8. version</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Project-only-commands"><span class="nav-number">1.2.</span> <span class="nav-text">Project-only commands</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-crawl"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. crawl</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-check"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. check</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-list"><span class="nav-number">1.2.3.</span> <span class="nav-text">3. list</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-edit"><span class="nav-number">1.2.4.</span> <span class="nav-text">4. edit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-parse"><span class="nav-number">1.2.5.</span> <span class="nav-text">5. parse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-bench"><span class="nav-number">1.2.6.</span> <span class="nav-text">6. bench</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Custom-project-commands"><span class="nav-number">1.3.</span> <span class="nav-text">Custom project commands</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiao</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
